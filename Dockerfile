@@ -1,11 +1,11 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM microsoft/dotnet:2.0-aspnet AS base
+FROM mcr.microsoft.com/dotnet/aspnet:2.1.27-focal-arm32v7 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM microsoft/dotnet:2.0-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1.27-focal-arm32v7 AS build
 WORKDIR /src
 COPY ["be-test/be-test/be-test.csproj", "be-test/"]
 RUN dotnet restore "be-test/be-test.csproj"
