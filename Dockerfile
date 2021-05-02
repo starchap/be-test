@@ -5,7 +5,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:2.1.27-bionic-arm32v7 AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1.815-bionic-arm32v7 AS build
 WORKDIR /src
 COPY ["be-test/be-test/be-test.csproj", "be-test/"]
 RUN dotnet restore "be-test/be-test.csproj"
