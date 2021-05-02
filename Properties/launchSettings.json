@@ -30,13 +30,8 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/weatherforecast",
-      "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443/weatherforecast;http://+:80/weatherforecast",
-        "ASPNETCORE_HTTPS_PORT": "443"
-      },
-      "httpPort": 80,
-      "useSSL": true,
-      "sslPort": 443
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }

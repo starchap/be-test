@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:3.1.14-bionic-arm32v7 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-EXPOSE 51803
-EXPOSE 44360
+EXPOSE 8080
+EXPOSE 4433
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1.408-bionic-arm32v7 AS build
 WORKDIR /src

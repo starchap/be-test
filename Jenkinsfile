@@ -9,7 +9,7 @@ node {
     }
 
     stage('Test image') {
-        app.inside("""--entrypoint=''""") {
+        app.inside("""--entrypoint='' -p 8080:80 -p 4433:443""") {
             sh 'echo "Tests passed"'
         }
     }
