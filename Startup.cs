@@ -26,7 +26,7 @@ namespace be_test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddHttpsRedirection(a => a.HttpsPort = 443);
+            // services.AddHttpsRedirection(a => a.HttpsPort = 443);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +37,7 @@ namespace be_test
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             
             app.UseRouting();
 
